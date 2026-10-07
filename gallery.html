@@ -19,8 +19,7 @@
         <div class="wrap bar">
             <a class="logo" href="index.html">LOGO</a>
             <nav id="nav" aria-label="Main"><a href="index.html">Home</a>
-                <a href="rooms.html">Rooms &amp;
-                    Amenities</a>
+                <a href="rooms.html">Rooms &amp; Amenities</a>
                 <a href="gallery.html" aria-current="page">Gallery</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -37,66 +36,54 @@
             <h1>Gallery</h1>
             <p>Take a look around and discover the spaces waiting for you.</p>
         </section>
-        <!-- MASONRY GRID: add a <button class="gal-item"> to add a photo -->
+
+        <!-- FILTER TABS (centered). data-filter must match a photo's data-category -->
+        <div class="wrap">
+            <div class="gal-tabs" role="group" aria-label="Filter photos">
+                <button type="button" class="gal-tab" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="gal-tab" data-filter="spaces" aria-pressed="false">Spaces</button>
+                <button type="button" class="gal-tab" data-filter="rooms" aria-pressed="false">Rooms</button>
+                <button type="button" class="gal-tab" data-filter="dining" aria-pressed="false">Dining</button>
+            </div>
+        </div>
+
+        <!-- MASONRY GRID: copy a <button class="gal-item"> to add a photo; set its data-category -->
         <div class="wrap masonry">
-            <button type="button" class="gal-item" data-full="assets/images/gallery1.jpg">
-                <img src="assets/images/gallery1.jpg" alt="Lobby" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="spaces" data-full="assets/images/gallery1.jpg" data-alt="Lobby">
+                <img src="assets/images/gallery1.jpg" alt="Lobby" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/gallery2.jpg">
-                <img src="assets/images/gallery2.jpg" alt="Café corner" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="dining" data-full="assets/images/gallery2.jpg" data-alt="Café corner">
+                <img src="assets/images/gallery2.jpg" alt="Café corner" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/gallery3.jpg">
-                <img src="assets/images/gallery3.jpg" alt="Reception" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="spaces" data-full="assets/images/gallery3.jpg" data-alt="Reception">
+                <img src="assets/images/gallery3.jpg" alt="Reception" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/gallery4.jpg">
-                <img src="assets/images/gallery4.jpg" alt="Staircase" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="spaces" data-full="assets/images/gallery4.jpg" data-alt="Staircase">
+                <img src="assets/images/gallery4.jpg" alt="Staircase" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/gallery5.jpg">
-                <img src="assets/images/gallery5.jpg" alt="Standard room" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="rooms" data-full="assets/images/gallery5.jpg" data-alt="Standard room">
+                <img src="assets/images/gallery5.jpg" alt="Standard room" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/gallery6.jpg">
-                <img src="assets/images/gallery6.jpg" alt="Superior room" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="rooms" data-full="assets/images/gallery6.jpg" data-alt="Superior room">
+                <img src="assets/images/gallery6.jpg" alt="Superior room" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/gallery7.jpg">
-                <img src="assets/images/gallery7.jpg" alt="Deluxe room" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="rooms" data-full="assets/images/gallery7.jpg" data-alt="Deluxe room">
+                <img src="assets/images/gallery7.jpg" alt="Deluxe room" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/g8.svg">
-                <img src="assets/images/gallery8.jpg" alt="Corridor" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="spaces" data-full="assets/images/gallery8.jpg" data-alt="Corridor">
+                <img src="assets/images/gallery8.jpg" alt="Corridor" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/gallery9.jpg">
-                <img src="assets/images/gallery9.jpg" alt="Breakfast" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="dining" data-full="assets/images/gallery9.jpg" data-alt="Breakfast">
+                <img src="assets/images/gallery9.jpg" alt="Breakfast" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/hero1.jpg">
-                <img src="assets/images/hero1.jpg" alt="Workspace" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="spaces" data-full="assets/images/hero1.jpg" data-alt="Workspace">
+                <img src="assets/images/hero1.jpg" alt="Workspace" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/hero2.jpg">
-                <img src="assets/images/hero2.jpg" alt="Bathroom" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="rooms" data-full="assets/images/hero2.jpg" data-alt="Bathroom">
+                <img src="assets/images/hero2.jpg" alt="Bathroom" width="1200" height="800" loading="lazy" decoding="async">
             </button>
-
-            <button type="button" class="gal-item" data-full="assets/images/hero3.jpg">
-                <img src="assets/images/hero3.jpg" alt="Rooftop view" width="1200" height="800" loading="lazy"
-                    decoding="async">
+            <button type="button" class="gal-item" data-category="spaces" data-full="assets/images/hero3.jpg" data-alt="Rooftop view">
+                <img src="assets/images/hero3.jpg" alt="Rooftop view" width="1200" height="800" loading="lazy" decoding="async">
             </button>
         </div>
 
@@ -105,28 +92,26 @@
             <button type="button" id="lb-prev" class="lb-btn lb-p" aria-label="Previous photo">‹</button>
             <figure>
                 <img id="lb-img" src="" alt="">
-                <figcaption id="lb-cap">
-                </figcaption>
+                <figcaption id="lb-cap"></figcaption>
             </figure>
             <button type="button" id="lb-next" class="lb-btn lb-n" aria-label="Next photo">›</button>
         </dialog>
     </main>
-    <!--footer-->
-    <!--footer-->
+
     <footer class="site-footer">
         <div class="wrap cols">
             <div>
-    <p class="logo">LOGO</p>
-    <p>Calm, comfortable rooms in a central location.</p>
-    <ul class="social" aria-label="Social media">
-        <li><a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
-        <li><a href="https://instagram.com/yourpage" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".9" fill="currentColor" stroke="none"/></svg></a></li>
-        <li><a href="https://x.com/yourpage" target="_blank" rel="noopener" aria-label="X (Twitter)">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.7 3.5h2.9l-6.3 7.2 7.4 9.8h-5.8l-4.5-5.9-5.2 5.9H3.3l6.7-7.7L2.9 3.5h5.9l4.1 5.4zm-1 15.3h1.6L7.4 5.1H5.7z"/></svg></a></li>
-    </ul>
-</div>
+                <p class="logo">LOGO</p>
+                <p>Calm, comfortable rooms in a central location.</p>
+                <ul class="social" aria-label="Social media">
+                    <li><a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
+                    <li><a href="https://instagram.com/yourpage" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".9" fill="currentColor" stroke="none"/></svg></a></li>
+                    <li><a href="https://x.com/yourpage" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.7 3.5h2.9l-6.3 7.2 7.4 9.8h-5.8l-4.5-5.9-5.2 5.9H3.3l6.7-7.7L2.9 3.5h5.9l4.1 5.4zm-1 15.3h1.6L7.4 5.1H5.7z"/></svg></a></li>
+                </ul>
+            </div>
             <div>
                 <h2>Explore</h2>
                 <ul>
@@ -144,8 +129,7 @@
             </div>
             <div>
                 <h2>Reach us</h2>
-                <address>69J8+VHM, Lake View Walk Path, Krishna Nagar, Shymala Hills, Bhopal, Madhya Pradesh 462002<br><a href="#" data-wa target="_blank" rel="noopener">WhatsApp
-                        us</a><br><a href="mailto:xofagat164@aahzz.com">xofagat164@aahzz.com</a></address>
+                <address>69J8+VHM, Lake View Walk Path, Krishna Nagar, Shymala Hills, Bhopal, Madhya Pradesh 462002<br><a href="#" data-wa target="_blank" rel="noopener">WhatsApp us</a><br><a href="mailto:xofagat164@aahzz.com">xofagat164@aahzz.com</a></address>
             </div>
         </div>
         <div class="copy">
@@ -155,7 +139,9 @@
             </div>
         </div>
     </footer>
+
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/gallery-tabs.js" defer></script>
 </body>
 
 </html>
