@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aurelia Boutique Hotel | Comfortable Rooms, Book Direct</title>
+    <meta name="description"
+        content="Aurelia Boutique Hotel offers clean, quiet rooms with free Wi-Fi and a 24-hour front desk. Book direct by WhatsApp or email.">
+    <link rel="canonical" href="https://www.example.com/index.html">
+    <meta property="og:title" content="Aurelia Boutique Hotel | Comfortable Rooms, Book Direct">
+    <meta property="og:description"
+        content="Aurelia Boutique Hotel offers clean, quiet rooms with free Wi-Fi and a 24-hour front desk. Book direct by WhatsApp or email.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Hotel","name":"Aurelia Boutique Hotel","email":"hello@example.com","address":{"@type":"PostalAddress","streetAddress":"123 Sample Street","addressLocality":"Your City"}}</script>
+</head>
+
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <!-- STICKY NAVIGATION -->
+    <header class="site-header">
+        <div class="wrap bar">
+            <a class="logo" href="index.html">LOGO</a>
+            <nav id="nav" aria-label="Main">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="rooms.html">Rooms
+                    &amp; Amenities</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="actions"><a class="btn btn-brand" href="contact.html#book">Book Now</a>
+                <a class="btn btn-wa" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a>
+                <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="nav"
+                    aria-label="Open menu"><span></span></button>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <!--Hero banner -->
+        <section class="hero" aria-label="Welcome">
+            <div class="slides">
+                <img class="slide on" src="assets/images/hero1.jpg" alt="" width="1200" height="800"
+                    fetchpriority="high">
+                <img class="slide" src="assets/images/hero2.jpg" alt="" width="1200" height="800" loading="lazy">
+                <img class="slide" src="assets/images/hero3.jpg" alt="" width="1200" height="800" loading="lazy">
+                <img class="slide" src="assets/images/hero4.jpg" alt="" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="shade"></div>
+            <div class="wrap hero-text">
+                <h1>Comfortable Hotel Stays in the Heart of the City</h1>
+                <p>Enjoy comfortable rooms, warm hospitality and a convenient location close to the city’s top
+                    attractions, dining and experiences.</p>
+                <p class="cta">
+                    <a class="btn btn-brand btn-lg" href="contact.html#book">Book Now</a><a class="btn btn-wa btn-lg"
+                        href="#" data-wa target="_blank" rel="noopener">Chat on WhatsApp</a>
+                </p>
+            </div>
+        </section>
+        <!-- booking from -->
+        <div class="wrap">
+            <form class="booking" id="booking-bar" aria-label="Check availability" novalidate>
+                <div>
+                    <label for="b-in">Check-in</label>
+                    <input id="b-in" type="date" required>
+                </div>
+                <div>
+                    <label for="b-out">Check-out</label>
+                    <input id="b-out" type="date" required>
+                </div>
+                <div>
+                    <label for="b-guests">Guests</label>
+                    <select id="b-guests">
+                        <option>1 guest</option>
+                        <option selected>2 guests</option>
+                        <option>3 guests</option>
+                        <option>4 guests</option>
+                    </select>
+                </div>
+                <button class="btn btn-brand" type="submit">Check availability</button>
+                <p id="b-error" class="error" role="alert" hidden></p>
+            </form>
+        </div>
+        <section class="wrap split">
+            <img src="assets/images/secound.jpg" alt="Hotel lobby" width="1200" height="800" loading="lazy"
+                decoding="async">
+            <div>
+                <h2>Bright, Comfortable Rooms Made for a Relaxing Stay</h2>
+                <p>Thoughtful spaces, peaceful nights and service with a personal touch. From the moment you arrive,
+                    every detail is designed to make your stay feel effortless and unhurried.</p>
+                <dl class="stats">
+                    <div>
+                        <dt>Rooms</dt>
+                        <dd>24</dd>
+                    </div>
+                    <div>
+                        <dt>Check-in</dt>
+                        <dd>24h</dd>
+                    </div>
+                    <div>
+                        <dt>Guest rating</dt>
+                        <dd>4.8</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+        <section class="soft">
+            <div class="wrap">
+                <div class="head">
+                    <h2>Our rooms</h2>
+                    <p>Three room types, one standard of comfort.</p>
+                </div>
+                <div class="grid3">
+                    <article class="card">
+                        <img src="assets/images/standerd.jpg" alt="Standard Room" width="1200" height="800"
+                            loading="lazy" decoding="async">
+                        <div>
+                            <h3>Standard Room</h3>
+                            <p class="muted">Quiet and compact</p>
+                            <p class="price">From ₹2,500 <small>/ night</small></p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="assets/images/supirior.jpg" alt="Superior Room" width="1200" height="800"
+                            loading="lazy" decoding="async">
+                        <div>
+                            <h3>Superior Room</h3>
+                            <p class="muted">More space, more light</p>
+                            <p class="price">From ₹3,500 <small>/ night</small></p>
+                        </div>
+                    </article>
+                    <article class="card"><img src="assets/images/delux.jpg" alt="Deluxe Room" width="1200" height="800"
+                            loading="lazy" decoding="async">
+                        <div>
+                            <h3>Deluxe Room</h3>
+                            <p class="muted">Our most spacious</p>
+                            <p class="price">From ₹4,800 <small>/ night</small></p>
+                        </div>
+                    </article>
+                </div>
+                <p class="center">
+                    <a class="btn btn-brand" href="rooms.html">View all rooms</a>
+                </p>
+            </div>
+        </section>
+        <section class="wrap">
+            <div class="head">
+                <h2>Amenities</h2>
+            </div>
+            <ul class="amen">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a14 14 0 0 1 20 0" />
+                        <circle cx="12" cy="19.5" r="1" />
+                    </svg><span>Free Wi-Fi</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 2v20M4.9 6l14.2 12M19.1 6 4.9 18M2 12h20" />
+                    </svg><span>Air conditioning</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="13" rx="2" />
+                        <path d="M8 21h8" />
+                    </svg><span>Smart TV</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5z" />
+                    </svg><span>24-hour front desk</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h2a2 2 0 0 1 0 4h-2M7 2v3M11 2v3" />
+                    </svg><span>Breakfast &amp; café</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                    </svg><span>Central location</span></li>
+            </ul>
+        </section>
+        <!-- GALLERY SLIDER: auto-slides, pauses on hover, click opens a popup. Logic lives in assets/js/gallery-slider.js -->
+        <section class="wrap gs-section" aria-labelledby="gs-title">
+            <div class="head">
+                <h2 id="gs-title">A look inside</h2>
+                <p>Hover to pause, click any photo to view it larger.</p>
+            </div>
+            <div class="gs-viewport" id="gs-viewport" role="region" aria-label="Photo slider" tabindex="-1">
+                <div class="gs-track" id="gs-track">
+                    <button type="button" class="gs-item" data-full="assets/images/gallery1.jpg"><img
+                            src="assets/images/gallery1.jpg" alt="Lobby" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery2.jpg"><img
+                            src="assets/images/gallery2.jpg" alt="Café corner" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery3.jpg"><img
+                            src="assets/images/gallery3.jpg" alt="Reception" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery4.jpg"><img
+                            src="assets/images/gallery4.jpg" alt="Staircase" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery5.jpg"><img
+                            src="assets/images/gallery5.jpg" alt="Standard room" width="1200" height="800"
+                            loading="lazy" decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery6.jpg"><img
+                            src="assets/images/gallery6.jpg" alt="Superior room" width="1200" height="800"
+                            loading="lazy" decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery7.jpg"><img
+                            src="assets/images/gallery7.jpg" alt="Deluxe room" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery8.jpg"><img
+                            src="assets/images/gallery8.jpg" alt="Corridor" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/gallery9.jpg"><img
+                            src="assets/images/gallery9.jpg" alt="Breakfast" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/hero1.jpg"><img
+                            src="assets/images/hero1.jpg" alt="Workspace" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/hero2.jpg"><img
+                            src="assets/images/hero2.jpg" alt="Bathroom" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                    <button type="button" class="gs-item" data-full="assets/images/hero3.jpg"><img
+                            src="assets/images/hero3.jpg" alt="Rooftop view" width="1200" height="800" loading="lazy"
+                            decoding="async"></button>
+                </div>
+            </div>
+        </section>
+        <!-- POPUP for the slider (separate from the Gallery page lightbox) -->
+        <dialog id="gs-popup" class="lightbox" aria-label="Photo viewer"><button type="button" id="gs-close"
+                class="lb-btn lb-x" aria-label="Close">✕</button><button type="button" id="gs-prev" class="lb-btn lb-p"
+                aria-label="Previous photo">‹</button>
+            <figure><img id="gs-img" src="" alt="">
+                <figcaption id="gs-cap"></figcaption>
+            </figure><button type="button" id="gs-next" class="lb-btn lb-n" aria-label="Next photo">›</button>
+        </dialog>
+        <section class="wrap">
+            <div class="head">
+                <h2>What guests say</h2>
+            </div>
+            <div class="grid3">
+                <figure class="card pad">
+                    <div class="stars" aria-label="5 out of 5">★★★★★</div>
+                    <blockquote>“Really enjoyed our stay. The room was neat and peaceful, and the location made it easy to get around the city. Check-in was quick and the staff were very helpful.”
+                    </blockquote>
+                    <figcaption class="muted">Rahul Mehta, Mumbai</figcaption>
+                </figure>
+                <figure class="card pad">
+                    <div class="stars" aria-label="5 out of 5">★★★★★</div>
+                    <blockquote>“Lovely stay and a very convenient location. The room was clean, quiet and just what we needed after a long day of exploring.”
+                    </blockquote>
+                    <figcaption class="muted">Ananya Sharma, Bengaluru</figcaption>
+                </figure>
+                <figure class="card pad">
+                    <div class="stars" aria-label="5 out of 5">★★★★★</div>
+                    <blockquote>“Everything was smooth from arrival to checkout. The room was clean and peaceful, the staff were polite, and the location was perfect for exploring the city.”</blockquote>
+                    <figcaption class="muted">Priya Nair, Pune</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="wrap cols">
+            <div>
+                <p class="logo">LOGO</p>
+                <p>Calm, comfortable rooms in a central location.</p>
+                <ul class="social" aria-label="Social media">
+                    <li><a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z" />
+                            </svg></a></li>
+                    <li><a href="https://instagram.com/yourpage" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                aria-hidden="true">
+                                <rect x="4" y="4" width="16" height="16" rx="4.5" />
+                                <circle cx="12" cy="12" r="3.6" />
+                                <circle cx="16.8" cy="7.2" r=".9" fill="currentColor" stroke="none" />
+                            </svg></a></li>
+                    <li><a href="https://x.com/yourpage" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M17.7 3.5h2.9l-6.3 7.2 7.4 9.8h-5.8l-4.5-5.9-5.2 5.9H3.3l6.7-7.7L2.9 3.5h5.9l4.1 5.4zm-1 15.3h1.6L7.4 5.1H5.7z" />
+                            </svg></a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Explore</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Rooms &amp; Amenities</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Reach us</h2>
+                <address>69J8+VHM, Lake View Walk Path, Krishna Nagar, Shymala Hills, Bhopal, Madhya Pradesh
+                    462002<br><a href="#" data-wa target="_blank" rel="noopener">WhatsApp
+                        us</a><br><a href="mailto:xofagat164@aahzz.com">xofagat164@aahzz.com</a></address>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="wrap copy-inner">
+                <p>&copy; <span id="year">2026</span> Aurelia Boutique Hotel. All rights reserved.</p>
+                <p>Crafted with care for a comfortable stay</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/gallery-slider.js" defer></script>
+</body>
+
+</html>

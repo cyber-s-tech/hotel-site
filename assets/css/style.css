@@ -1,0 +1,884 @@
+/* Aurelia Boutique Hotel: plain CSS, no frameworks. Re-theme by editing the :root colours. */
+:root {
+    --brand: #503635;
+    --brand-d: #0a524e;
+    --ink: #000000;
+    --muted: #796b4d;
+    --soft: #d6dad9;
+    --line: #796b4d;
+    --wa: #664d12;
+    --r: 14px
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px
+}
+
+body {
+    margin: 0;
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: #fff
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin: 0 0 .5em;
+    letter-spacing: -.01em
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem)
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.3rem)
+}
+
+a {
+    color: var(--brand);
+    text-decoration: none
+}
+
+.wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 20px
+}
+
+section {
+    padding: 56px 0
+}
+
+.soft {
+    background: var(--soft)
+}
+
+.center {
+    text-align: center;
+    margin-top: 32px
+}
+
+.muted {
+    color: var(--muted);
+    margin: 0 0 .6em
+}
+
+.sr,
+.skip:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0)
+}
+
+.skip:focus {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    background: #fff;
+    padding: 10px;
+    z-index: 99
+}
+
+:focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    border-radius: 999px;
+    padding: .6rem 1.2rem;
+    font: 600 .9rem system-ui;
+    text-decoration: none;
+    transition: background .2s
+}
+
+.btn-brand {
+    background: var(--brand);
+    color: #fff
+}
+
+.btn-brand:hover {
+    background: var(--brand-d)
+}
+
+.btn-wa {
+    background: var(--wa);
+    color: #fff
+}
+
+.btn-wa:hover {
+    filter: brightness(.92)
+}
+
+.btn-lg {
+    padding: .85rem 1.7rem;
+    font-size: 1rem
+}
+
+/* header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line)
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 68px
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--brand);
+    text-decoration: none
+}
+
+#nav {
+    display: flex;
+    gap: 6px
+}
+
+#nav a {
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: .95rem
+}
+
+#nav a:hover,
+#nav a[aria-current] {
+    color: var(--brand);
+    background: var(--soft)
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.menu-btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: none;
+    cursor: pointer
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    margin: auto;
+    position: relative
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+    content: "";
+    position: absolute;
+    left: 0
+}
+
+.menu-btn span::before {
+    top: -7px
+}
+
+.menu-btn span::after {
+    top: 7px
+}
+
+/* hero */
+.hero {
+    position: relative;
+    min-height: 78vh;
+    display: grid;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    padding: 80px 0 120px
+}
+
+.slides,
+.slide,
+.shade {
+    position: absolute;
+    inset: 0
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s
+}
+
+.slide.on {
+    opacity: 1
+}
+
+.shade {
+    background: linear-gradient(180deg, rgba(10, 30, 32, .35), rgba(10, 30, 32, .65))
+}
+
+.hero-text {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto 0 max(20px, calc((100vw - 1180px)/2))
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    max-width: 560px
+}
+
+.cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px
+}
+
+/* booking bar: one row */
+.booking {
+    position: relative;
+    z-index: 5;
+    margin: -64px 0 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: 0 12px 40px rgba(16, 40, 42, .14);
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 14px;
+    align-items: end
+}
+
+label {
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 10px 0 4px
+}
+
+.booking label {
+    margin-top: 0
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    font: inherit;
+    padding: 11px 12px;
+    border: 1px solid #cbd8d7;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink)
+}
+
+.booking .btn {
+    height: 48px;
+    padding: 0 1.6rem
+}
+
+.error {
+    grid-column: 1/-1;
+    margin: 0;
+    color: #b42318;
+    font-weight: 600;
+    font-size: .9rem
+}
+
+/* layout blocks */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center
+}
+
+.split img {
+    border-radius: var(--r);
+    width: 100%;
+    object-fit: cover
+}
+
+.stats {
+    display: flex;
+    gap: 32px;
+    margin: 24px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--line)
+}
+
+.stats dt {
+    font-size: .8rem;
+    color: var(--muted)
+}
+
+.stats dd {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--brand)
+}
+
+.head {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 32px
+}
+
+.head p {
+    color: var(--muted)
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden
+}
+
+.card img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    width: 100%
+}
+
+.card>div {
+    padding: 18px
+}
+
+.pad {
+    padding: 24px
+}
+
+.price {
+    font-weight: 700;
+    margin: .4em 0 1em
+}
+
+.price small {
+    font-weight: 400;
+    color: var(--muted)
+}
+
+.stars {
+    color: #e0a100
+}
+
+blockquote {
+    margin: .6em 0;
+    font-size: 1.05rem
+}
+
+.amen {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px
+}
+
+.amen li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 22px 10px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    text-align: center;
+    font-size: .9rem
+}
+
+.amen svg {
+    width: 30px;
+    height: 30px;
+    color: var(--brand)
+}
+
+.pagehead {
+    text-align: center;
+    padding-bottom: 16px
+}
+
+.pagehead p {
+    color: var(--muted)
+}
+
+.stack {
+    display: grid;
+    gap: 56px;
+    padding-bottom: 56px
+}
+
+.room:nth-child(even)>img {
+    order: 2
+}
+
+.tablewrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--r)
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--line)
+}
+
+thead th {
+    background: var(--brand);
+    color: #fff
+}
+
+/* gallery */
+.masonry {
+    columns: 3;
+    column-gap: 16px;
+    padding-bottom: 56px
+}
+
+.gal-item {
+    display: block;
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    break-inside: avoid;
+    border-radius: var(--r);
+    overflow: hidden
+}
+
+.gal-item img {
+    width: 100%;
+    transition: transform .4s
+}
+
+.gal-item:hover img {
+    transform: scale(1.04)
+}
+
+.lightbox {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    background: rgba(10, 20, 22, .95);
+    color: #fff;
+    place-items: center
+}
+
+.lightbox[open] {
+    display: grid
+}
+
+.lightbox figure {
+    margin: 0;
+    text-align: center
+}
+
+.lightbox img {
+    max-width: 92vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    margin: auto
+}
+
+.lb-btn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .18);
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer
+}
+
+.lb-x {
+    top: 16px;
+    right: 16px
+}
+
+.lb-p {
+    left: 16px;
+    top: 50%
+}
+
+.lb-n {
+    right: 16px;
+    top: 50%
+}
+
+/* contact */
+.two {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;
+    padding-bottom: 56px
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.contact-form {
+    background: #fff;
+    border: 2px solid var(--brand);
+    border-radius: var(--r);
+    padding: 24px
+}
+
+.two iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: var(--r);
+    margin-top: 24px
+}
+
+address {
+    font-style: normal;
+    margin: .6em 0
+}
+
+/* footer */
+.site-footer {
+    background: var(--ink);
+    color: #c9d6d5;
+    margin-top: 24px
+}
+
+.site-footer .logo {
+    color: #9d8959
+}
+
+.site-footer a {
+    color: #c9d6d5
+}
+
+.site-footer h2 {
+    font-size: 1.1rem;
+    color: #9d8959
+}
+
+.cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 32px;
+    padding: 48px 20px
+}
+
+.cols ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2
+}
+
+.copy {
+    margin: 0;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    font-size: .85rem
+}
+
+.copy p {
+    margin: 0
+}
+
+.copy-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0
+}
+
+.site-footer .social a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 50%;
+    color: #9d8959;
+    transition: background .2s, border-color .2s
+}
+
+.site-footer .social a:hover {
+    background: var(--brand);
+    border-color: var(--brand)
+}
+
+.social svg {
+    width: 18px;
+    height: 18px
+}
+
+/* tablet & mobile */
+@media(max-width:1024px) {
+
+    .grid3,
+    .amen {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .masonry {
+        columns: 2
+    }
+
+    .split {
+        gap: 28px
+    }
+
+    figure.card {
+        margin: 0
+    }
+}
+
+@media(max-width:860px) {
+    .menu-btn {
+        display: block
+    }
+
+    .actions .btn-wa {
+        display: none
+    }
+
+    #nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #fff;
+        padding: 10px 20px 16px;
+        border-bottom: 1px solid var(--line)
+    }
+
+    #nav.open {
+        display: flex
+    }
+
+    .booking {
+        grid-template-columns: 1fr
+            /* fields stacked one under another */
+    }
+
+    .booking .btn {
+        grid-column: 1/-1;
+        width: 100%
+    }
+
+    .split,
+    .two,
+    .cols {
+        grid-template-columns: 1fr
+    }
+
+    .room:nth-child(even)>img {
+        order: 0
+    }
+}
+
+@media(max-width:600px) {
+    .grid3 {
+        grid-template-columns: 1fr
+    }
+
+    .amen {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .masonry {
+        columns: 1
+    }
+
+    .row2 {
+        grid-template-columns: 1fr
+    }
+
+    .hero {
+        min-height: 70vh
+    }
+
+    .copy-inner {
+        flex-direction: column;
+        text-align: center
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    * {
+        transition: none !important
+    }
+}
+
+/* ===== HOME: GALLERY SLIDER (new section; nothing above this line was changed) ===== */
+.gs-section {
+    overflow: hidden
+}
+
+.gs-viewport {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: auto;
+    cursor: pointer;
+    -webkit-overflow-scrolling: touch
+}
+
+.gs-viewport::-webkit-scrollbar {
+    display: none
+}
+
+.gs-track {
+    display: flex;
+    gap: 16px;
+    width: max-content
+}
+
+.gs-item {
+    flex: 0 0 auto;
+    width: calc((min(100vw, 1180px) - 40px - 48px) / 4);
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    border-radius: var(--r);
+    overflow: hidden
+}
+
+.gs-item img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    transition: transform .4s
+}
+
+.gs-item:hover img {
+    transform: scale(1.05)
+}
+
+/* Responsive: 320px to 2560px (slide width is always derived from the container, so nothing can overflow) */
+@media(max-width:1024px) {
+    .gs-item {
+        width: calc((min(100vw, 1180px) - 40px - 32px) / 3)
+    }
+}
+
+@media(max-width:600px) {
+    .gs-track {
+        gap: 12px
+    }
+
+    .gs-item {
+        width: calc((100vw - 40px - 12px) / 2)
+    }
+}
+
+@media(max-width:420px) {
+    .gs-item {
+        width: calc(100vw - 40px)
+    }
+}
+
+@media(max-width:340px) {
+    .gs-section.wrap {
+        padding-left: 12px;
+        padding-right: 12px
+    }
+
+    .gs-item {
+        width: calc(100vw - 24px)
+    }
+}
+
+@media(min-width:1800px) {
+    .gs-track {
+        gap: 20px
+    }
+
+    .gs-item {
+        width: calc((1180px - 40px - 60px) / 4)
+    }
+}
